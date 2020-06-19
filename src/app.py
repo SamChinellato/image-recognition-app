@@ -1,6 +1,5 @@
 import streamlit as st
 from model import predict
-from io import BytesIO
 
 # Minimal code for frontend using streamlit
 st.title("Upload An Image to Classify (JPG files only)")
