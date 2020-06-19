@@ -2,7 +2,7 @@
 
 To clone: 
 
-    https://github.com/SamChinellato/image-recognition-app.git
+    git clone https://github.com/SamChinellato/image-recognition-app.git
 
 To run:
 
