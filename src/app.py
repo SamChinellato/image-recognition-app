@@ -3,7 +3,6 @@ from model import predict
 
 # Minimal code for frontend using streamlit
 st.title("Upload An Image to Classify (JPG files only)")
-
 uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 if uploaded_file is not None:
     st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
@@ -18,3 +17,15 @@ if uploaded_file is not None:
     except Exception as e:
         st.write("Something went wrong, unable to classify image")
         st.write("For debug: {}".format(e))
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+st.markdown("Made by Sam Chinellato. Deployed using AWS. [View the App sourcecode here]("
+            "https://github.com/SamChinellato/image-recognition-app)")
+
