@@ -11,6 +11,10 @@ if uploaded_file is not None:
     st.write("Classifying...")
     img = uploaded_file.read()
     # pass uploaded image to model
-    result = predict(img)
-    # Result output
-    st.write('%s (%.2f%%)' % (result[0], result[1] * 100))
+    try:
+        result = predict(img)
+        # Result output
+        st.write('%s (%.2f%%)' % (result[0], result[1] * 100))
+    except Exception as e:
+        st.write("Something went wrong, unable to classify image")
+        st.write("For debug: {}".format(e))

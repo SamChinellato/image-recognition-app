@@ -1,6 +1,4 @@
 from mxnet import nd, image
-import gluoncv as gcv
-from gluoncv.data import ImageNet1kAttr
 from gluoncv.data.transforms.presets.imagenet import transform_eval
 from gluoncv.model_zoo import get_model
 
